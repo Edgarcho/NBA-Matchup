@@ -1,5 +1,6 @@
 import com.epicodus.nba_matchup.Constants;
 
+import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
@@ -20,5 +21,8 @@ public class SportsFeedsService {
                 .url(url)
                 .header("Authorization", Constants.SPORTSFEEDS_TOKEN)
                 .build();
+
+        Call call = client.newCall(request);
+        call.enqueue(callback);
     }
 }
