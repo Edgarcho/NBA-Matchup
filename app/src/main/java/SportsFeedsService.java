@@ -12,7 +12,7 @@ import okhttp3.Request;
 
 public class SportsFeedsService {
 
-    public static void activePlayers(Callback callback){
+    public static void findActivePlayers(Callback callback){
         OkHttpClient client = new OkHttpClient.Builder().build();
         HttpUrl.Builder urlBuilder = HttpUrl.parse(Constants.CURRENT_ACTIVE_PLAYER_URL).newBuilder();
         String url = urlBuilder.build().toString();
