@@ -1,4 +1,4 @@
-package com.epicodus.nba_matchup;
+package com.epicodus.nba_matchup.models;
 
 import java.util.ArrayList;
 

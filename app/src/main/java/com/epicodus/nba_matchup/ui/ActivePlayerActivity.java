@@ -1,14 +1,16 @@
-package com.epicodus.nba_matchup;
+package com.epicodus.nba_matchup.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+
+import com.epicodus.nba_matchup.models.Player;
+import com.epicodus.nba_matchup.R;
+import com.epicodus.nba_matchup.services.SportsFeedsService;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-import butterknife.BindView;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;

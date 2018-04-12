@@ -1,8 +1,7 @@
-package com.epicodus.nba_matchup;
-
-import android.util.Log;
+package com.epicodus.nba_matchup.services;
 
 import com.epicodus.nba_matchup.Constants;
+import com.epicodus.nba_matchup.models.Player;
 
 import org.json.JSONArray;
 import org.json.JSONException;
