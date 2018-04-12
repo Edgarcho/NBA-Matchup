@@ -19,7 +19,7 @@ public class SportsFeedsService {
     public static void findPlayer(String name, Callback callback){
         OkHttpClient client = new OkHttpClient.Builder().build();
         HttpUrl.Builder urlBuilder = HttpUrl.parse(Constants.CURRENT_ACTIVE_PLAYER_URL).newBuilder();
-        urlBuilder.addQueryParameter(Constants.PlAYER_QUERY_PARAMETER, name);
+        urlBuilder.addQueryParameter(Constants.PLAYER_QUERY_PARAMETER, name);
         String url = urlBuilder.build().toString();
 
         Request request = new Request.Builder()
