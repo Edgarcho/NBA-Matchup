@@ -64,7 +64,8 @@ public class SportsFeedsService {
                     currentContract.add(currentContractJSON.getJSONObject(y).getString("AnnualAverageSalary"));
                 }
                 String playerImage = playerJSON.getString("officialImageSrc");
-                Player player = new Player(firstName,lastName,jerseyNumber,position,age,birthDay,birthCity,birthCountry,twitter)
+                Player player = new Player(firstName,lastName,jerseyNumber,position,age,birthDay,birthCity,birthCountry,twitter,currentContract,playerImage);
+                listOfPlayers.add(player);
             }
 
         }

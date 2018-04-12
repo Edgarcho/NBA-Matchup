@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import okhttp3.Call;
@@ -13,6 +14,7 @@ import okhttp3.Callback;
 import okhttp3.Response;
 
 public class ActivePlayerActivity extends AppCompatActivity {
+    public ArrayList<Player> mPlayers = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +33,14 @@ public class ActivePlayerActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onResponse(Call call, Response response) throws IOException {
+            public void onResponse(Call call, Response response) {
+                mPlayers = SportsFeedsService.processFindPlayerResults(response);
+                ActivePlayerActivity.this.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+
+                    }
+                });
 
             }
         });
