@@ -16,12 +16,11 @@ public class Player {
     private String birthCity;
     private String birthCountry;
     private String twitter;
-    private ArrayList<String> contract = new ArrayList<>();
     private String playerImage;
 
 
 
-    public Player(String firstName, String lastName, String jerseyNumber, String position, String age, String birthDay, String birthCity, String birthCountry, String twitter, ArrayList<String> contract, String playerImage) {
+    public Player(String firstName, String lastName, String jerseyNumber, String position, String age, String birthDay, String birthCity, String birthCountry, String twitter, String playerImage) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.jerseyNumber = jerseyNumber;
@@ -31,7 +30,6 @@ public class Player {
         this.birthCity = birthCity;
         this.birthCountry = birthCountry;
         this.twitter = twitter;
-        this.contract = contract;
         this.playerImage = playerImage;
     }
 
@@ -69,10 +67,6 @@ public class Player {
 
     public String getTwitter() {
         return twitter;
-    }
-
-    public ArrayList<String> getContract(){
-        return contract;
     }
 
     public String getPlayerImage() {

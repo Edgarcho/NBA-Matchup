@@ -36,7 +36,7 @@ public class ActivePlayerActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(Call call, Response response) {
-                mPlayers = SportsFeedsService.processFindPlayerResults(response);
+                mPlayers = sportsFeedsService.processFindPlayerResults(response);
                 ActivePlayerActivity.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
