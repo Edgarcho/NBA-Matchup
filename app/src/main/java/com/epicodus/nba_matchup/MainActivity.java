@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        String playerName = mPlayerName.getText().toString();
+        String playerName = mPlayerName.getText().toString().trim();
         Intent intent = new Intent(MainActivity.this, ActivePlayerActivity.class);
         intent.putExtra("player", playerName);
         startActivity(intent);

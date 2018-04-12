@@ -8,5 +8,5 @@ package com.epicodus.nba_matchup;
 public class Constants {
     public static final String SPORTSFEEDS_TOKEN = BuildConfig.SPORTSFEEDS_TOKEN;
     public static final String CURRENT_ACTIVE_PLAYER_URL = "https://api.mysportsfeeds.com/v1.2/pull/nba/current/active_players.json";
-    public static final String PlAYER_QUERY_PARAMETER = "?player=";
+    public static final String PlAYER_QUERY_PARAMETER = "player";
 }
