@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @BindView(R.id.playerName) EditText mPlayerName;
     @BindView(R.id.findPlayers) Button mFindPlayers;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,8 +26,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         String playerName = mPlayerName.getText().toString();
-        Intent intent = new Intent(MainActivity.this, ActivePlayer.class);
+        Intent intent = new Intent(MainActivity.this, ActivePlayerActivity.class);
         intent.putExtra("player", playerName);
-        StartActivity(intent);
+        startActivity(intent);
     }
 }
