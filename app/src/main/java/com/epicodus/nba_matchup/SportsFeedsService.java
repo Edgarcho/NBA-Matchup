@@ -1,3 +1,5 @@
+package com.epicodus.nba_matchup;
+
 import com.epicodus.nba_matchup.Constants;
 
 import okhttp3.Call;
@@ -12,9 +14,10 @@ import okhttp3.Request;
 
 public class SportsFeedsService {
 
-    public static void findActivePlayers(Callback callback){
+    public static void findPlayer(String name, Callback callback){
         OkHttpClient client = new OkHttpClient.Builder().build();
         HttpUrl.Builder urlBuilder = HttpUrl.parse(Constants.CURRENT_ACTIVE_PLAYER_URL).newBuilder();
+        urlBuilder.addQueryParameter(Constants.PlAYER_QUERY_PARAMETER, name);
         String url = urlBuilder.build().toString();
 
         Request request = new Request.Builder()
