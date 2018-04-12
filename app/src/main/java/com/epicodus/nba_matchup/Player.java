@@ -1,5 +1,7 @@
 package com.epicodus.nba_matchup;
 
+import java.util.ArrayList;
+
 /**
  * Created by Edgar on 4/11/2018.
  */
@@ -12,16 +14,14 @@ public class Player {
     private String age;
     private String birthDay;
     private String birthCity;
+    private String birthCountry;
     private String twitter;
-    private String shootPosition;
-    private String totalYears;
-    private String totalSalary;
-    private String annualSalary;
+    private ArrayList<String> contract = new ArrayList<>();
     private String playerImage;
-    private String teamCity;
-    private String team;
 
-    public Player(String firstName, String lastName, String jerseyNumber, String position, String age, String birthDay, String birthCity, String twitter, String shootPosition, String totalYears, String totalSalary, String annualSalary, String playerImage, String teamCity, String team) {
+
+
+    public Player(String firstName, String lastName, String jerseyNumber, String position, String age, String birthDay, String birthCity, String birthCountry, String twitter, ArrayList<String> contract, String playerImage) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.jerseyNumber = jerseyNumber;
@@ -29,14 +29,10 @@ public class Player {
         this.age = age;
         this.birthDay = birthDay;
         this.birthCity = birthCity;
+        this.birthCountry = birthCountry;
         this.twitter = twitter;
-        this.shootPosition = shootPosition;
-        this.totalYears = totalYears;
-        this.totalSalary = totalSalary;
-        this.annualSalary = annualSalary;
+        this.contract = contract;
         this.playerImage = playerImage;
-        this.teamCity = teamCity;
-        this.team = team;
     }
 
     public String getFirstName() {
@@ -67,35 +63,20 @@ public class Player {
         return birthCity;
     }
 
+    public String getBirthCountry() {
+        return birthCountry;
+    }
+
     public String getTwitter() {
         return twitter;
     }
 
-    public String getShootPosition() {
-        return shootPosition;
-    }
-
-    public String getTotalYears() {
-        return totalYears;
-    }
-
-    public String getTotalSalary() {
-        return totalSalary;
-    }
-
-    public String getAnnualSalary() {
-        return annualSalary;
+    public ArrayList<String> getContract(){
+        return contract;
     }
 
     public String getPlayerImage() {
         return playerImage;
     }
 
-    public String getTeamCity() {
-        return teamCity;
-    }
-
-    public String getTeam() {
-        return team;
-    }
 }

@@ -32,12 +32,7 @@ public class ActivePlayerActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-            try{
-                String jsonData = response.body().string();
-                Log.d("PLAYERS:", jsonData);
-            }catch (IOException e){
-                e.printStackTrace();
-            }
+
             }
         });
     }
