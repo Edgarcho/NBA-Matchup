@@ -21,8 +21,6 @@ public class SportsFeedsService {
         HttpUrl.Builder urlBuilder = HttpUrl.parse(Constants.CURRENT_ACTIVE_PLAYER_URL).newBuilder();
         urlBuilder.addQueryParameter(Constants.PlAYER_QUERY_PARAMETER, name);
         String url = urlBuilder.build().toString();
-        Log.d("URL", url);
-        Log.d("Aut", Constants.SPORTSFEEDS_TOKEN);
 
         Request request = new Request.Builder()
                 .url(url)

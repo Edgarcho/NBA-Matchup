@@ -12,15 +12,23 @@ Download:
 
 Import Project by Android Studio Menu > File > Import Project...
 
-Before running project, you will need an MySportsFeed api key.
+Before running the project, you will need a API Key from MySportsFeeds.
 
-1.Create a MySportsFeed account.
+1.Create a MySportsFeeds account.
 
-2 Create a new file named gradle.properties.
+2.Open Postman. Change the Authorization type to Basic Auth.
 
-    Copy and paste inside the file
-    `org.gradle.jvmargs=-Xmx1536m
-     MySportsFeedToken = "API_KEY HERE"`
+    Enter your MySportsFeeds Username and Password.
+    Click on preview request.
+    Switch to Headers and copy the value provided.
+
+3 Create a new file named gradle.properties.
+
+    Copy and paste this inside the file
+      `org.gradle.jvmargs=-Xmx1536m
+       MySportsFeedToken = "API_KEY"`
+    paste the value provided from Postman the API_KEY section
+
 
 
 Run NBA Matchup by Android Studio Menu > Run > Run YourApp.
@@ -45,5 +53,3 @@ _Email no one with any questions, comments, or concerns._
 *This software is licensed under the MIT license*
 
 Copyright (c) 2018 **_Edgar Hernandez-Ortiz_**
-
-
